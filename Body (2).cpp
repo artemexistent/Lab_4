@@ -7,17 +7,7 @@ void body()
 	symatri_tree* symatri = new symatri_tree(binar);
 
 
-	string func[8] =
-	{
-		"Add int",
-		"Print",
-		"Print int",
-		"Delete",
-		"Add",
-		"Print",
-		"Symetric tree",
-		"Back."
-	};
+	string func[8] =ь{"Add int","Print","Print int","Delete","Add","Print","Symetric tree","Back."};
 
 	int pos = 0;
 	bool end = false;
@@ -64,7 +54,7 @@ void body()
 			switch (pos)
 			{
 			case 0:
-				tree->add_new_interactive(entnum("integer"), node);
+				tree->add_int(entnum("integer"), node);
 				break;
 			case 1:
 				if (tree->root)

@@ -1,18 +1,17 @@
 #include "Header.h"
 
-bool checknum(char sign)
+bool checknum(char a)
 {
-	return (sign != '1' && sign != '2' && sign != '3' && sign != '4' && sign != '5' &&
-		sign != '6' && sign != '7' && sign != '8' && sign != '9' && sign != '0');
+	return (a != '1' && a != '2' && a != '3' && a != '4' && a != '5' && a != '6' && a != '7' && a != '8' && a != '9' && a != '0');
 }
 
 bool check_int(string word)
 {
-	bool number = true;
+	bool num = true;
 	for (int i = 0; i < word.length(); i++)
-		if (check_number(word[i]))
-			number = false;
-	return number;
+		if (checknum(word[i]))
+			num = false;
+	return num;
 }
 
 int entnum(string mark)
@@ -26,9 +25,9 @@ int entnum(string mark)
 		bool is_int = check_int(word);
 		if (is_int)
 		{
-			int number = stoi(word);
+			int num = stoi(word);
 			end = true;
-			return number;
+			return num;
 		}
 		else
 		{
